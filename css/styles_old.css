@@ -97,13 +97,11 @@
 
 /** Navigation Changes **/
 
-.navbar {
+.navbar-default {
     margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
     border-radius: 8px;
-    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-    background-color: rgba(227, 227, 227, 0.8); /* Adjust the background color and transparency */
 }
 
 .navbar-brand {
@@ -114,15 +112,13 @@
     color: black;
 }
 
-body,
-.navbar-nav > li > a {
+body, .navbar-nav > li > a {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-body,
-.navbar-nav > li > a.active {
+body, .navbar-nav > li > a.active {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     font-style: normal;
@@ -132,6 +128,15 @@ body,
     margin-right: 25px; /* Adjust this value as needed */
 }
 
+.navbar-fixed-top {
+    position: fixed;
+    z-index: 1; /* Adjust the z-index as needed */
+}
+
+.navbar {
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(227, 227, 227, 0.8); /* Adjust the background color and transparency */
+}
 
 
 /** Home Section **/
@@ -162,6 +167,8 @@ body,
     align-items: center;
     display: flex;
 }
+
+
 
 .lh-sm{
     color : #4C4C4C;
@@ -243,180 +250,82 @@ body,
     cursor: pointer;
 }
 
-
-/**------------------- New Custom style ---------------------------**/
-
-#header{
-    position: fixed;
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-radius: 8px;
-    z-index: 1000;
-    height: 50px;
-    max-width: 95%;
-    font-weight: bold;
-    font-style: normal;
-    background-color: rgba(227, 227, 227, 0.6);
-    backdrop-filter: blur(4px);
-}
-
-.header-menu-item{
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.header-menu-item > a{
-    color: #4C4C4C;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-}
-
-.header-menu-item > a.active{
-    color: #4C4C4C;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    text-decoration: none;
-}
-
-
-/* Menu Button Styles */
-.header-menu-toggle {
-    display: block;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-#nav-toggle{
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2rem;
-    color: #4C4C4C;
-}
-
-.image-settings{
-    width: 100%;
-    height: 100%;
+/* Media query for mobile view */
+@media only screen and (max-width: 768px) {
+    .hero-split-right {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-
-    .header-menu-item {
-        display: none;
-    }
-
     .hero-split-left {
         max-width: 100%;
-        margin-left: 5%;
-        margin-right: 5%;
     }
+}
 
-    .hero-split-right {
-        display: none;
-    }
+@media screen and (max-width: 768px) {
 
-    .button-container {
-       max-width: 100%; /* Full width for mobile view */
+ .button-container {
+        max-width: 100%; /* Full width for mobile view */
     }
 
     .hero-split-buttons {
-       flex-direction: column; /* Display buttons vertically */
-       align-items: center; /* Center-align buttons */
-   }
+        flex-direction: column; /* Display buttons vertically */
+        align-items: center; /* Center-align buttons */
+    }
 
     .image-buttons {
-       margin-top: 10px; /* Adjust margin as needed */
+        margin-top: 10px; /* Adjust margin as needed */
     }
 
     .or-text {
-       margin: 10px 0; /* Adjust margin as needed */
+        margin: 10px 0; /* Adjust margin as needed */
     }
 
     .lh-sm {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
 
-     .custom-text-bold {
-       font-size: 24px; /* Adjust font size for smaller screens */
-    }
+        .custom-text-bold {
+            font-size: 24px; /* Adjust font size for smaller screens */
+        }
 
-    .custom-text-normal {
-       font-size: 24px; /* Adjust font size for smaller screens */
-    }
-
- .home-section{
-        height: 100vh;
-        padding-top: 10px;
-    }
-
-}
-
-@media (min-width: 768px) {
-
-    .header-menu-toggle {
-        display: none;
-    }
-
-    .hero-split-left {
-        max-width: 70%;
-        margin-left: 10%;
-        margin-right: 5%;
-    }
-
-    .hero-split-right {
-        max-width: 30%;
-        margin-left: 5%;
-        margin-right: 15%;
-    }
-
-     .home-section{
-            height: 100vh;
+        .custom-text-normal {
+            font-size: 24px; /* Adjust font size for smaller screens */
         }
 }
 
-/* Side Navigation Menu Styles */
-.side-menu {
-    position: fixed;
-    top: 0;
-    left: -280px;
-    width: 280px;
-    height: 100%;
-    z-index: 1000;
-    transition: left 0.3s ease;
-    background-color: rgba(227, 227, 227, 0.6);
-    backdrop-filter: blur(8px);
+
+/** ---------------------------------- skills-section ------------------------------ **/
+/* Custom CSS for dot progress */
+
+.skills-section{
+
+}
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.side-menu ul {
-    list-style: none;
-    padding: 20px;
+.progress-bar-dot {
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+  animation: progress-bar-stripes 2s linear infinite;
 }
 
-.side-menu ul li {
-    margin-bottom: 15px;
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
 
-.side-menu ul li a {
-    color: #4C4C4C;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
-}
 
-.side-menu ul li a.active{
-    color: #4C4C4C;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    text-decoration: none;
-}
 
-.side-menu.open {
-    left: 0;
-}
+
