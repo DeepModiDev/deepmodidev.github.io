@@ -1,0 +1,190 @@
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.image-settings {
+    width: 100%;
+    height: 100%;
+}
+
+.resume-button {
+    background-color: white;
+    color: #fec107; /* Yellow color code */
+    border: 2px solid #fec107; /* Yellow border */
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-family: "Comfortaa", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 25px;
+}
+
+.resume-button > a {
+    color: #fec107;
+    font-style: normal;
+     font-weight: bold;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.resume-button:hover {
+    background-color: #fec107; /* Yellow background color on hover */
+    color: white; /* White text color on hover */
+    text-decoration: none;
+}
+
+.resume-button > a:hover {
+    background-color: #fec107; /* Yellow background color on hover */
+    color: white; /* White text color on hover */
+    text-decoration: none;
+}
+
+.image-button {
+    margin: 6px; /* Adjust spacing between buttons */
+    padding: 10px;
+    border: none;
+    background: url('/assets/ellipse-2.svg') no-repeat center center; /* Background image */
+    background-size: cover; /* Adjust background size as needed */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.image-button img {
+    width: 23px; /* Adjust button size as needed */
+    height: 23px; /* Adjust button size as needed */
+    margin: 2px;
+}
+
+.image-button:hover {
+    background: url('/assets/ellipse-filled.svg') no-repeat center center; /* Background image */
+    background-size: cover;
+    cursor: pointer;
+}
+
+.or-text {
+    color: #fec107;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hero-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.hero-split-buttons {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.lh-sm {
+    color: #4c4c4c;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.custom-text-alignment {
+    background-color: #cfcfcf;
+}
+
+.custom-text-bold {
+    color: #fec107;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.custom-text-normal {
+    color: #000000;
+    font-style: normal;
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .temp-body{
+        height: 70px;
+    }
+
+    .home-section {
+        padding-top: 10px;
+    }
+
+    .hero-split-left {
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .hero-split-right {
+        display: none;
+    }
+
+    .button-container {
+        max-width: 100%; /* Full width for mobile view */
+    }
+
+    .hero-split-buttons {
+        flex-direction: column; /* Display buttons vertically */
+        align-items: center; /* Center-align buttons */
+    }
+
+    .image-buttons {
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+
+    .or-text {
+        margin: 10px 0; /* Adjust margin as needed */
+    }
+
+    .lh-sm {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .custom-text-bold {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .custom-text-normal {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 768px) {
+
+    .home-section {
+        padding-top: 10px;
+    }
+
+    .hero-split-left {
+        max-width: 70%;
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+
+    .hero-split-right {
+        max-width: 30%;
+        margin-left: 5%;
+        margin-right: 15%;
+    }
+}
