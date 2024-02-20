@@ -91,14 +91,6 @@
     display: flex;
 }
 
-.lh-sm {
-    color: #4c4c4c;
-    font-style: normal;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-}
-
 .custom-text-alignment {
     background-color: #cfcfcf;
 }
@@ -160,7 +152,11 @@
     }
 
     .lh-sm {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+        color: #4c4c4c;
+        font-style: normal;
+        font-family: "Roboto", sans-serif;
+        font-weight: normal;
     }
 
     .custom-text-bold {
@@ -193,6 +189,14 @@
 
 /** Desktop View **/
 @media (min-width: 768px) {
+
+    .lh-sm {
+        color: #4c4c4c;
+        font-style: normal;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
 
     .hero-split-left {
         max-width: 70%;
