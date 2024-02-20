@@ -1,0 +1,12 @@
+/** No custom style needed for this section **/
+/** Mobile View **/
+@media only screen and (max-width: 768px) {
+
+}
+
+/** Desktop View **/
+@media (min-width: 768px) {
+    #titleAboutMe{
+        display: none;
+    }
+}
