@@ -47,7 +47,7 @@
 }
 
 .image-button {
-    margin: 6px; /* Adjust spacing between buttons */
+    margin: 0px 5px; /* Adjust spacing between buttons */
     padding: 10px;
     border: none;
     background: url('/assets/ellipse-2.svg') no-repeat center center; /* Background image */
@@ -153,10 +153,6 @@
         margin-top: 10px; /* Adjust margin as needed */
     }
 
-    .or-text {
-        margin: 10px 0; /* Adjust margin as needed */
-    }
-
     .lh-sm {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
@@ -168,6 +164,10 @@
     .custom-text-normal {
         font-size: 24px; /* Adjust font size for smaller screens */
     }
+
+    .or-text{
+            margin-top: 10px;
+        }
 }
 
 @media (min-width: 768px) {
