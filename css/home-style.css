@@ -111,6 +111,16 @@
     font-size: 30px;
 }
 
+.footer-design{
+    height: auto;
+    width: auto;
+    background-color: #fec107;
+    font-style: normal;
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+}
+
 /** Mobile View **/
 @media only screen and (max-width: 768px) {
 

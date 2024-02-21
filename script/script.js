@@ -61,8 +61,8 @@ window.addEventListener('scroll', function() {
     var homeSection = document.getElementById('home');
     var aboutSection = document.getElementById('about');
     var skillsSection = document.getElementById('skills');
-    var projectsSection = document.getElementById('projects');
-    var contactSection = document.getElementById('contact');
+    var projectsSection = document.getElementById('experiences');
+    var contactSection = document.getElementById('projects');
     var scrollPosition = window.scrollY;
 
     if (scrollPosition < homeSection.offsetTop + homeSection.offsetHeight - headerHeight) {
@@ -76,10 +76,10 @@ window.addEventListener('scroll', function() {
         setActiveLinkSideMenu('li-skills');
     } else if (scrollPosition < projectsSection.offsetTop + projectsSection.offsetHeight - headerHeight) {
         setActiveLink('item3');
-        setActiveLinkSideMenu('li-project');
+        setActiveLinkSideMenu('li-experiences');
     } else {
         setActiveLink('item4');
-        setActiveLinkSideMenu('li-contact');
+        setActiveLinkSideMenu('li-project');
     }
 });
 
