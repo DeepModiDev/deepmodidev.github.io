@@ -1,15 +1,105 @@
 .skills-section {
     min-height: 100vh;
+    padding: 80px 0;
 }
 
+#titleSkills {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 48px;
+}
+
+/* Glassmorphic Skill Cards */
 .dynamic-div {
-    display: inline-block; /* Set display to inline-block */
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 14px;
+    margin: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 16px;
+    transition: var(--transition);
+    min-width: 90px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.08);
 }
 
-.skill-level-text-size{
-    font-size: 13px; /* Adjust font size for smaller screens */
-            color: #4c4c4c;
-            font-style: normal;
-            font-family: "Roboto", sans-serif;
-            font-weight: normal;
+.dynamic-div::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.dynamic-div:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(245, 158, 11, 0.3);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.dynamic-div i,
+.dynamic-div img {
+    transition: var(--transition);
+}
+
+.dynamic-div:hover i {
+    color: var(--primary-color) !important;
+    transform: scale(1.15);
+}
+
+.dynamic-div:hover img {
+    transform: scale(1.15);
+}
+
+.skill-level-text-size {
+    font-size: 11px;
+    color: var(--text-light);
+    font-style: normal;
+    font-family: var(--system-font);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.skills-section p:not(.skill-level-text-size):not(.lh-sm) {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.dynamic-div .lh-sm {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Uniform Icon Styling - Reduced Size */
+.skill-icon {
+    color: var(--text-secondary) !important;
+    font-size: 28px !important;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dynamic-div:hover .skill-icon {
+    color: var(--primary-color) !important;
+}
+
+/** Mobile View **/
+@media only screen and (max-width: 768px) {
+    #titleSkills {
+        font-size: 36px;
+    }
 }
